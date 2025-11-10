@@ -1,0 +1,42 @@
+{
+  "common": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "services": "Layanan",
+    "language": "Bahasa"
+  },
+  "navigation": {
+    "home": "Beranda",
+    "about": "Tentang Kami",
+    "contact": "Hubungi Kami",
+    "services": "Layanan Kami"
+  },
+  "home": {
+    "title": "Selamat Datang di Perusahaan Kami",
+    "subtitle": "Kami menyediakan layanan terbaik untuk bisnis Anda",
+    "description": "Dengan pengalaman lebih dari 10 tahun, kami memberikan solusi terbaik yang disesuaikan dengan kebutuhan Anda.",
+    "cta": "Mulai Sekarang",
+    "learnMore": "Pelajari Lebih Lanjut",
+    "stats": {
+      "clients": "{count} Klien",
+      "projects": "{count} Proyek Selesai",
+      "years": "{count} Tahun Pengalaman"
+    }
+  },
+  "about": {
+    "title": "Tentang Kami",
+    "description": "Pelajari lebih lanjut tentang perusahaan dan misi kami"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "form": {
+      "name": "Nama",
+      "email": "Email",
+      "message": "Pesan",
+      "submit": "Kirim Pesan",
+      "success": "Pesan berhasil dikirim!",
+      "error": "Gagal mengirim pesan. Silakan coba lagi."
+    }
+  }
+}

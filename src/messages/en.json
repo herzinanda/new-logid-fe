@@ -1,0 +1,42 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "services": "Services",
+    "language": "Language"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "services": "Our Services"
+  },
+  "home": {
+    "title": "Welcome to Our Company",
+    "subtitle": "We provide excellent services for your business",
+    "description": "With over 10 years of experience, we deliver top-notch solutions tailored to your needs.",
+    "cta": "Get Started",
+    "learnMore": "Learn More",
+    "stats": {
+      "clients": "{count} Clients",
+      "projects": "{count} Projects Completed",
+      "years": "{count} Years of Experience"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Learn more about our company and mission"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    }
+  }
+}
