@@ -24,6 +24,73 @@
       "years": "{count} Tahun Pengalaman"
     }
   },
+  "hero": {
+    "label": "Mitra Logistik Terbaik Anda",
+    "title": "Solusi Logistik Terpadu untuk Dunia yang Terkoneksi",
+    "description": "Mitra tepercaya dalam pengiriman & rantai pasokan untuk pertumbuhan bisnis Anda. Dari kargo global dan pergudangan hingga pengiriman jarak terakhir, kami menjamin kecepatan, keandalan.",
+    "ctaText": "Dapatkan Penawaran"
+  },
+  "partners": {
+    "partner1": "Teks deskriptif alt untuk mitra 1",
+    "partner2": "Teks deskriptif alt untuk mitra 2",
+    "partner3": "Teks deskriptif alt untuk mitra 3",
+    "partner4": "Teks deskriptif alt untuk mitra 4",
+    "partner5": "Teks deskriptif alt untuk mitra 5"
+  },
+  "homeAbout": {
+    "label": "Tentang Kami",
+    "description": "Dengan pengalaman puluhan tahun, kami berspesialisasi dalam mengubah tantangan menjadi <highlight>solusi logistik cerdas</highlight> yang mendorong efisiensi dan keandalan.",
+    "ctaText": "Kenali Kami Lebih Lanjut",
+    "ctaLink": "/about",
+    "stats": {
+      "experience": { "value": "{count}+", "label": "Tahun Pengalaman" },
+      "projects": { "value": "{count}+", "label": "Proyek Selesai" },
+      "satisfaction": { "value": "{count}+", "label": "Klien Puas" },
+      "successRate": { "value": "{count}%", "label": "Tingkat Keberhasilan" }
+    }
+  },
+  "services": {
+    "label": "Layanan Kami",
+    "title": "Kami Memberikan Setiap Kebutuhan Anda",
+    "description": "Kami menyediakan solusi logistik yang disesuaikan, dirancang untuk memenuhi kebutuhan Anda dan dieksekusi dengan presisi dan keahlian.",
+    "projectLogistics_title": "Logistik Proyek",
+    "projectLogistics_desc": "Penanganan ahli kargo kompleks melalui transportasi udara, laut, atau darat.",
+    "projectLogistics_alt": "Gambar Logistik Proyek",
+    "contractLogistics_title": "Logistik Kontrak",
+    "contractLogistics_desc": "Manajemen logistik komprehensif yang dirancang untuk efisiensi, skalabilitas, dan pertumbuhan.",
+    "contractLogistics_alt": "Gambar Logistik Kontrak",
+    "heavyLifting_title": "Logistik Angkat Berat",
+    "heavyLifting_desc": "Perpindahan kargo berukuran besar, berat, dan khusus yang aman dan tepat.",
+    "heavyLifting_alt": "Gambar Logistik Angkat Berat",
+    "internationalFreight_title": "Pengiriman Kargo Internasional",
+    "internationalFreight_desc": "Solusi pengiriman global yang andal, menjamin pengiriman aman dan tepat waktu di seluruh dunia.",
+    "internationalFreight_alt": "Gambar Pengiriman Kargo Internasional",
+    "dangerousGoods_title": "Logistik Barang Berbahaya",
+    "dangerousGoods_desc": "Solusi transportasi yang aman dan patuh untuk material berbahaya dan sensitif.",
+    "dangerousGoods_alt": "Gambar Logistik Barang Berbahaya",
+    "multimodaTransport_title": "Transportasi Multimoda",
+    "multimodaTransport_desc": "Pengiriman kargo tanpa hambatan yang menggabungkan jaringan udara, laut, dan darat.",
+    "multimodaTransport_alt": "Gambar Transportasi Multimoda"
+  },
+  "workProcess": {
+    "label": "Cara Kami Bekerja",
+    "title": "Proses Kerja Kami",
+    "description": "Alur kerja logistik yang terbukti yang memastikan setiap pengiriman bergerak secara efisien — mulai dari perencanaan dan koordinasi hingga pengiriman dan optimasi kinerja.",
+    "workProcessItem": [
+      {
+        "title": "Konsultasi & Perencanaan",
+        "description": "Kami menganalisis kebutuhan logistik, rute, dan jadwal Anda untuk membuat strategi pengiriman yang disesuaikan guna memaksimalkan efisiensi dan meminimalkan biaya."
+      },
+      {
+        "title": "Eksekusi & Koordinasi",
+        "description": "Tim kami mengelola setiap detail operasional — mulai dari penanganan kargo dan bea cukai hingga koordinasi transportasi multimoda — memastikan pengiriman yang lancar dan tepat waktu."
+      },
+      {
+        "title": "Pemantauan & Optimasi",
+        "description": "Kami terus melacak pengiriman Anda dan menganalisis data kinerja untuk meningkatkan keandalan, transparansi, dan efisiensi logistik di masa depan."
+      }
+    ]
+  },
   "about": {
     "title": "Tentang Kami",
     "description": "Pelajari lebih lanjut tentang perusahaan dan misi kami"

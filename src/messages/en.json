@@ -9,8 +9,10 @@
   "navigation": {
     "home": "Home",
     "about": "About Us",
+    "projects": "Projects",
+    "services": "Our Services",
     "contact": "Contact Us",
-    "services": "Our Services"
+    "ctaContact": "Let's Talk"
   },
   "home": {
     "title": "Welcome to Our Company",
@@ -23,6 +25,79 @@
       "projects": "{count} Projects Completed",
       "years": "{count} Years of Experience"
     }
+  },
+  "hero": {
+    "label": "Your Best-Logistics Partner",
+    "title": "Seamless Logistics for a Connected World",
+    "description": "Trusted shipping & supply chain partner for your business growth. From global freight and warehousing to last-mile delivery, we ensure speed, reliability.",
+    "ctaText": "Get a Quote"
+  },
+  "partners": {
+    "partner1": "Descriptive alt text for partner 1",
+    "partner2": "Descriptive alt text for partner 2",
+    "partner3": "Descriptive alt text for partner 3",
+    "partner4": "Descriptive alt text for partner 4",
+    "partner5": "Descriptive alt text for partner 5"
+  },
+  "homeAbout": {
+    "label": "About Us",
+    "description": "With decades of experience, we specialize in turning challenges into <highlight>smart logistics solutions</highlight> that drive efficiency and reability.",
+    "ctaText": "Get to Know Us",
+    "ctaLink": "/about",
+    "stats": {
+      "experience": { "value": "{count}+", "label": "Years of Experience" },
+      "projects": { "value": "{count}+", "label": "Projects Completed" },
+      "satisfaction": { "value": "{count}+", "label": "Satisfied Clients" },
+      "successRate": { "value": "{count}%", "label": "Success Rate" }
+    }
+  },
+  "services": {
+    "label": "Our Services",
+    "title": "We Deliver Everything You Need",
+    "description": "We provide tailored logistics solutions, designed to meet your needs and executed with precision and expertise.",
+
+    "projectLogistics_title": "Project Logistics",
+    "projectLogistics_desc": "Expert handling of complex cargo through air, sea, or land transport.",
+    "projectLogistics_alt": "Project Logistics Image",
+
+    "contractLogistics_title": "Contract Logistics",
+    "contractLogistics_desc": "Comprehensive logistics management designed for efficiency, scalability, and growth.",
+    "contractLogistics_alt": "Contract Logistics Image",
+
+    "heavyLifting_title": "Heavy Lifting Logistics",
+    "heavyLifting_desc": "Safe and precise movement of oversized, heavy, and specialized cargo.",
+    "heavyLifting_alt": "Heavy Lifting Logistics Image",
+
+    "internationalFreight_title": "International Freight Forwarding",
+    "internationalFreight_desc": "Reliable global freight solutions ensuring safe and timely delivery worldwide.",
+    "internationalFreight_alt": "International Freight Forwarding Image",
+
+    "dangerousGoods_title": "Dangerous Goods Logistics",
+    "dangerousGoods_desc": "Secure and compliant transport solutions for hazardous and sensitive materials.",
+    "dangerousGoods_alt": "Dangerous Goods Logistics Image",
+
+    "multimodaTransport_title": "Multimoda Transportation",
+    "multimodaTransport_desc": "Seamless cargo delivery combining air, sea, and land networks.",
+    "multimodaTransport_alt": "Multimoda Transportation Image"
+  },
+  "workProcess" : {
+    "label": "How We Work",
+    "title": "Our Work Process",
+    "description": "A proven logistics workflow that ensures every shipment moves efficiently — from planning and coordination to delivery and performance optimization.",
+    "workProcessItem": [
+      {
+        "title": "Consultation & Planning", 
+        "description": "We analyze your logistics needs, routes, and timelines to create tailored shipping strategies that maximize efficiency and minimize cost."
+      },
+      {
+        "title": "Excecution & Coordination", 
+        "description": "Our team manages every operational detail — from cargo handling and customs clearance to multimoda transport coordination — ensuring smooth, on-time delivery."
+      },
+      {
+        "title": "Monitoring & Optimization", 
+        "description": "We continuously track your shipments and analyze performance data to enhance reliability, transparency, and future logistics efficiency."
+      }
+    ]
   },
   "about": {
     "title": "About Us",
