@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { getStrapiURL } from "@/utils/get-strapi-url";
+import type { ImageProps as NextImageProps } from "next/image";
 
-interface StrapiImageProps {
+interface StrapiImageProps extends Omit<NextImageProps, 'src'> {
     src: string;
     alt: string;
     className?: string;
     width?: number;
     height?: number;
-    [key: string]: string | number | boolean | undefined;
 }
 
 export function StrapiImage({
@@ -16,23 +16,30 @@ export function StrapiImage({
     className,
     width,
     height,
+    fill,
     ...rest
 }: Readonly<StrapiImageProps>) {
     const imageUrl = getStrapiMedia(src);
     if (!imageUrl) return null;
+
+    // Don't set style.width/height when using fill prop
+    const imageStyle = fill
+        ? { objectFit: "cover" as const }
+        : {
+            width: width ? `${width}px` : 'auto',
+            height: height ? `${height}px` : 'auto',
+            objectFit: "cover" as const,
+        };
 
     return (
         <Image
             src={imageUrl}
             alt={alt}
             className={className}
-            width={width}
-            height={height}
-            style={{
-                width: width ? `${width}px` : 'auto',
-                height: height ? `${height}px` : 'auto',
-                objectFit: "cover", // This ensures the image isn't squashed
-            }}
+            width={fill ? undefined : width}
+            height={fill ? undefined : height}
+            fill={fill}
+            style={imageStyle}
             unoptimized
             {...rest}
         />

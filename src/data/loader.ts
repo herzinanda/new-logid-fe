@@ -162,3 +162,75 @@ export async function getFeaturedProjects(locale: string = "en") {
 
     return fetchAPI(url.href, { method: "GET" });
 }
+
+// About Page
+
+function buildAboutPageQuery(locale: string) {
+    return qs.stringify({
+        populate: {
+            blocks: {
+                on: {
+                    "blocks.about-hero-section": {
+                        populate: {
+                            label: true,
+                            image: {
+                                fields: ["url", "alternativeText"],
+                            },
+                        },
+                    },
+                    "blocks.about-statistics": {
+                        populate: {
+                            label: true,
+                            statistics: true,
+                        },
+                    },
+                    "blocks.about-our-story": {
+                        populate: {
+                            label: true,
+                            image: {
+                                fields: ["url", "alternativeText"],
+                            },
+                            values: {
+                                populate: {
+                                    icon: {
+                                        fields: ["url", "alternativeText"],
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    "blocks.about-introduction": {
+                        populate: {
+                            label: true,
+                            video: true,
+                        },
+                    },
+                    "blocks.about-projects": {
+                        populate: {
+                            label: true,
+                            ctaButton: true,
+                        },
+                    },
+                    "blocks.about-cta": {
+                        populate: {
+                            ctaButton: true,
+                            ctaImage: {
+                                fields: ["url", "alternativeText"],
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        locale: locale,
+    });
+}
+
+export async function getAboutPage(locale: string = "en") {
+    const path = "/api/about-page";
+    const url = new URL(path, BASE_URL);
+
+    url.search = buildAboutPageQuery(locale);
+
+    return fetchAPI(url.href, { method: "GET" });
+}

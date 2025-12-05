@@ -11,25 +11,28 @@ export const useHeaderScroll = (isWhite: boolean = false) => {
 
     const toggleHeaderScrollerClass = () => {
       const hasScrolled = window.scrollY > threshold;
-      
+
       if (hasScrolled !== isScrolled) {
         setIsScrolled(hasScrolled);
-        
-        if (hasScrolled) {
-          setHeaderClass('scrolled is-white');
-        } else {
-          setHeaderClass(isWhite ? 'is-white' : '');
-        }
+      }
+
+      // Update header class based on scroll and isWhite prop
+      if (hasScrolled) {
+        setHeaderClass('scrolled is-white');
+      } else {
+        setHeaderClass(isWhite ? 'is-white' : '');
       }
     };
 
+    // Initial check
+    toggleHeaderScrollerClass();
+
     window.addEventListener('scroll', toggleHeaderScrollerClass, { passive: true });
-    toggleHeaderScrollerClass(); // Initial check
 
     return () => {
       window.removeEventListener('scroll', toggleHeaderScrollerClass);
     };
-  }, [isWhite, isScrolled]);
+  }, [isWhite, isScrolled]); // Re-run when isWhite changes
 
   return headerClass;
 };

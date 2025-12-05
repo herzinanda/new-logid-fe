@@ -3,20 +3,38 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
+import { useCallback } from 'react';
+import NavLinks from './NavLinks';
 
+/**
+ * Mobile navigation menu component
+ * Features:
+ * - Full-screen overlay menu
+ * - Backdrop click to close
+ * - Active link detection
+ * - Accessible with proper ARIA attributes
+ */
 const MobileMenu = () => {
   const t = useTranslations('navigation');
 
-  const closeMobileMenu = () => {
+  /**
+   * Close mobile menu and restore body scroll
+   */
+  const closeMobileMenu = useCallback(() => {
     const menu = document.getElementById('header-mobile');
     const body = document.body;
+    const toggleButton = document.getElementById('btn-toggle-menu-mobile');
+
     if (menu) {
       menu.classList.remove('active');
       body.style.overflow = '';
-      // Also update the aria-expanded attribute on the toggle button
-      document.getElementById('btn-toggle-menu-mobile')?.setAttribute('aria-expanded', 'false');
+
+      // Update toggle button aria-expanded state
+      if (toggleButton) {
+        toggleButton.setAttribute('aria-expanded', 'false');
+      }
     }
-  };
+  }, []);
 
   return (
     <div
@@ -25,10 +43,22 @@ const MobileMenu = () => {
       aria-modal="true"
       aria-label="Mobile navigation menu"
     >
-      <div className="header-mobile-bg" onClick={closeMobileMenu}></div>
+      {/* Backdrop - click to close */}
+      <div
+        className="header-mobile-bg"
+        onClick={closeMobileMenu}
+        aria-hidden="true"
+      />
+
       <div className="header-mobile-wrapper">
+        {/* Header with logo and close button */}
         <div className="header-mobile-top">
-          <Link href="/" className="logo-link" aria-label="Bricknet - Return to homepage" onClick={closeMobileMenu}>
+          <Link
+            href="/"
+            className="logo-link"
+            aria-label="Bricknet - Return to homepage"
+            onClick={closeMobileMenu}
+          >
             <picture>
               <Image
                 src="/images/logo-color@1x.png"
@@ -39,6 +69,7 @@ const MobileMenu = () => {
               />
             </picture>
           </Link>
+
           <button
             type="button"
             className="btn-close"
@@ -49,33 +80,20 @@ const MobileMenu = () => {
           </button>
         </div>
 
+        {/* Mobile Navigation Links */}
         <nav aria-label="Primary navigation">
-          <ul>
-            <li className="group">
-              <Link href="/" className="active" aria-current="page" onClick={closeMobileMenu}>
-                {t('home')}
-              </Link>
-            </li>
-            <li className="group">
-              <Link href="/about" onClick={closeMobileMenu}>
-                {t('about')}
-              </Link>
-            </li>
-            <li className="group">
-              <Link href="/projects" onClick={closeMobileMenu}>
-                {t('projects')}
-              </Link>
-            </li>
-            <li className="group">
-              <Link href="/contact" onClick={closeMobileMenu}>
-                {t('contact')}
-              </Link>
-            </li>
-          </ul>
+          <NavLinks onLinkClick={closeMobileMenu} />
         </nav>
+
+        {/* CTA Button */}
         <div className="header-mobile-bottom">
-          <Link href="/contact" className="btn-cta" aria-label="Contact us for a quote" onClick={closeMobileMenu}>
-            {t('talk')}
+          <Link
+            href="/contact"
+            className="btn-cta"
+            aria-label="Contact us for a quote"
+            onClick={closeMobileMenu}
+          >
+            {t('ctaContact')}
           </Link>
         </div>
       </div>

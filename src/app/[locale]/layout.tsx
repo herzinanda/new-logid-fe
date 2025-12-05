@@ -7,6 +7,7 @@ import Navigation from '@/components/(main)/Navigation';
 import '../globals.css';
 import Header from '@/components/(main)/layout/Header';
 import Script from 'next/script';
+import MobileMenu from '@/components/(main)/layout/MobileMenu';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -92,7 +93,10 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {/* <Navigation /> */}
           <Header />
-          <main>{children}</main>
+          <MobileMenu />
+          <main id="main-content">
+            {children}
+          </main>
         </NextIntlClientProvider>
         <Script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" strategy="afterInteractive" />
         <Script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" strategy="afterInteractive" />

@@ -102,7 +102,7 @@ export interface projectProps {
     seo: SeoProps;
 }
 
-type ComponentType = "blocks.hero-section" | "blocks.home-about" | "blocks.home-services" | "blocks.home-values" | "blocks.home-work-process" | "blocks.home-featured-projects" | "blocks.testimonials" | "blocks.home-blog" | "blocks.home-call-to-action";
+type ComponentType = "blocks.hero-section" | "blocks.home-about" | "blocks.home-services" | "blocks.home-values" | "blocks.home-work-process" | "blocks.home-featured-projects" | "blocks.testimonials" | "blocks.home-blog" | "blocks.home-call-to-action" | "blocks.about-hero-section" | "blocks.about-statistics" | "blocks.about-our-story" | "blocks.about-introduction" | "blocks.about-projects" | "blocks.about-cta";
 
 interface Base<
     T extends ComponentType,
@@ -180,5 +180,46 @@ export interface HomeCallToActionProps extends Base<"blocks.home-call-to-action"
     ctaBgImage: ImageProps,
 }
 
+export type AboutBlock = AboutHeroSectionProps | AboutStatisticsProps | AboutIntroductionProps | AboutProjectsProps | AboutCTAProps;
 
+export interface AboutHeroSectionProps extends Base<"blocks.about-hero-section"> {
+    label: labelProps;
+    title: string;
+    subtitle: string;
+    image: ImageProps;
+}
 
+export interface AboutStatisticsProps extends Base<"blocks.about-statistics"> {
+    label: labelProps;
+    text: string;
+    statistics: aboutStatsProps[];
+}
+
+export interface AboutOurStoryProps extends Base<"blocks.about-our-story"> {
+    label: labelProps;
+    title: string;
+    image: ImageProps;
+    text: string;
+    values: valueProps[];
+}
+
+export interface AboutIntroductionProps extends Base<"blocks.about-introduction"> {
+    label: labelProps;
+    title: string;
+    text: string;
+    embedVideoURL: string;
+}
+
+export interface AboutProjectsProps extends Base<"blocks.about-projects"> {
+    label: labelProps;
+    title: string;
+    description: string;
+    ctaButton: ButtonProps;
+}
+
+export interface AboutCTAProps extends Base<"blocks.about-cta"> {
+    title: string;
+    description: string;
+    ctaButton: ButtonProps;
+    ctaImage: ImageProps;
+}
